@@ -76,7 +76,7 @@ class Skeleton(object):
     def inverse_kinematics_np(self, joints, face_joint_idx, smooth_forward=False):
         assert len(face_joint_idx) == 4
         """Get Forward Direction"""
-        l_hip, r_hip, sdr_r, sdr_l = face_joint_idx
+        r_hip, l_hip, sdr_r, sdr_l = face_joint_idx
         across1 = joints[:, r_hip] - joints[:, l_hip]
         across2 = joints[:, sdr_r] - joints[:, sdr_l]
         across = across1 + across2
